@@ -1,18 +1,73 @@
 body {
   font-family: system-ui, sans-serif;
-  background: linear-gradient(to right, #111, #333);
-  color: #fff;
+  background: linear-gradient(135deg, #1f1c2c, #928dab);
+  color: white;
+  margin: 0;
+  padding: 0;
   text-align: center;
-  margin-top: 20vh;
 }
+
+header {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 1rem 0;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.logo {
+  color: #ff4081;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #ff4081;
+}
+
+.content {
+  padding: 2rem;
+}
+
 button {
-  padding: 1rem 2rem;
+  background-color: #ff4081;
   border: none;
+  padding: 1rem 2rem;
   border-radius: 12px;
-  background: #ff4081;
   color: white;
   font-size: 1.2rem;
   cursor: pointer;
-  transition: 0.3s;
+  transition: transform 0.3s ease;
 }
-button:hover { transform: scale(1.1); }
+
+button:hover {
+  transform: scale(1.1);
+}
+
+footer {
+  background: rgba(0, 0, 0, 0.9);
+  padding: 1rem 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}

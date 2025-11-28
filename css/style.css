@@ -1,0 +1,202 @@
+/* ===== Global Reset ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== Header / Footer Placeholder ===== */
+#header-placeholder,
+#footer-placeholder {
+  width: 100%;
+}
+
+/* ===== Main Content ===== */
+main {
+  flex: 1;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ===== Headings ===== */
+h1, h2 {
+  text-align: center;
+  color: #222;
+}
+
+h1 {
+  margin-bottom: 1rem;
+}
+
+.content p {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #666;
+}
+
+/* ===== Grid Layout ===== */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  justify-items: center;
+  align-items: start;
+}
+
+.grid-cell {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  padding: 1rem;
+  width: 100%;
+  max-width: 320px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.grid-cell:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.blank-cell {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+/* ===== Gem Pair Rows ===== */
+.gem-selects {
+  margin-top: 1rem;
+}
+
+.pair {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+/* ===== Dropdowns ===== */
+select {
+  flex: 1;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+  font-size: 0.9rem;
+  background-color: #fafafa;
+  cursor: pointer;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+select:hover {
+  background-color: #f0f0f0;
+  border-color: #999;
+}
+
+select:disabled {
+  background-color: #eee;
+  color: #aaa;
+  cursor: not-allowed;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 1024px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-cell {
+    max-width: 100%;
+  }
+}
+
+/* ===== Footer Styling ===== */
+#footer-placeholder {
+  text-align: center;
+  padding: 1rem 0;
+  background: #222;
+  color: #eee;
+  font-size: 0.85rem;
+}
+
+/* ===== HEADER STYLING ===== */
+header {
+  background-color: #222;
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+header h1 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: #ffcc33;
+}
+
+/* Make header responsive */
+@media (max-width: 700px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    margin-top: 0.5rem;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}
+
+/* ===== FOOTER STYLING ===== */
+footer {
+  background-color: #222;
+  color: #eee;
+  padding: 1.5rem 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: auto;
+  border-top: 1px solid #333;
+  letter-spacing: 0.3px;
+}
+
+footer p {
+  margin: 0;
+  color: #ccc;
+}

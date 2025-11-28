@@ -1,0 +1,324 @@
+{
+  "gems": [
+    {
+      "name": "Strength",
+      "ingredients": ["Copper Ore", "Elemental Energy", "Plant Leaf"],
+      "allowedCells": ["cell-1", "cell-2", "cell-4", "cell-5", "cell-6", "cell-8"],
+      "boostStat": "Strength",
+      "boostAmount": "1/10",
+      "boostType": 1
+    },
+    {
+      "name": "Health",
+      "ingredients": ["Animal Tongue", "Beast Tooth", "Honeycomb"],
+      "allowedCells": ["cell-1", "cell-2", "cell-4", "cell-5", "cell-6", "cell-8"],
+      "boostStat": "Health",
+      "boostAmount": "1/10",
+      "boostType": 1
+    },
+    {
+      "name": "Coordination",
+      "ingredients": ["Dragon Tail", "Fish Fin", "Serpent Eye"],
+      "allowedCells": ["cell-1", "cell-2", "cell-4", "cell-5", "cell-6", "cell-8"],
+      "boostStat": "Coordination",
+      "boostAmount": "1/3",
+      "boostType": 1
+    },
+    {
+      "name": "Agility",
+      "ingredients": ["Aberration Mind Source", "Humanoid Flesh", "Lucky Coin"],
+      "allowedCells": ["cell-1", "cell-2", "cell-4", "cell-5", "cell-6", "cell-8"],
+      "boostStat": "Agility",
+      "boostAmount": "1/3",
+      "boostType": 1
+    },
+    {
+      "name": "Retaliation",
+      "ingredients": ["Animal Tooth", "Beast Tooth"],
+      "allowedCells": ["cell-1", "cell-2", "cell-4", "cell-5", "cell-6", "cell-8"],
+      "boostStat": "Counter Attack",
+      "boostAmount": "1/50",
+      "boostType": 1
+    },
+    {
+      "name": "Restoration",
+      "ingredients": ["Dragon Tail", "Plant Root"],
+      "allowedCells": ["cell-1", "cell-2", "cell-4", "cell-5", "cell-6", "cell-8"],
+      "boostStat": "Healing",
+      "boostAmount": "1/50",
+      "boostType": 1
+    },
+    {
+      "name": "Dueling",
+      "ingredients": ["Humanoid Limb", "Serpent Tail"],
+      "allowedCells": ["cell-1", "cell-2", "cell-4", "cell-5", "cell-6", "cell-8"],
+      "boostStat": "Melee Weapons",
+      "boostAmount": "1/50",
+      "boostType": 1
+    },
+    {
+      "name": "Sniping",
+      "ingredients": ["Animal Tail", "Vermin Tooth"],
+      "allowedCells": ["cell-1", "cell-2", "cell-4", "cell-5", "cell-6", "cell-8"],
+      "boostStat": "Ranged Weapons",
+      "boostAmount": "1/50",
+      "boostType": 1
+    },
+    {
+      "name": "Sorcery",
+      "ingredients": ["Beast Wing", "Plant Vine"],
+      "allowedCells": ["cell-1", "cell-2", "cell-4", "cell-5", "cell-6", "cell-8"],
+      "boostStat": "Magical Weapons",
+      "boostAmount": "1/50",
+      "boostType": 1
+    },
+    {
+      "name": "Brawling",
+      "ingredients": ["Dragon Eye", "Humanoid Bone"],
+      "allowedCells": ["cell-1", "cell-2", "cell-4", "cell-5", "cell-6", "cell-8"],
+      "boostStat": "Unarmed Combat",
+      "boostAmount": "1/50",
+      "boostType": 1
+    },
+    {
+      "name": "Elusion",
+      "ingredients": ["Animal Eye", "Serpent Tongue"],
+      "allowedCells": ["cell-1", "cell-2", "cell-4", "cell-5", "cell-6", "cell-8"],
+      "boostStat": "Evasion",
+      "boostAmount": "1/50",
+      "boostType": 1
+    },
+    {
+      "name": "Normalizing",
+      "ingredients": ["Aberration Mind Source", "Honeycomb", "Protection Stone"],
+      "allowedCells": ["cell-1"],
+      "boostStat": "damage to Aberrations",
+      "boostAmount": "1/10",
+      "boostType": 1
+    },
+    {
+      "name": "Hunting",
+      "ingredients": ["Animal Eye", "Animal Tongue", "Animal Tooth", "Animal Wing"],
+      "allowedCells": ["cell-1"],
+      "boostStat": "damage to Animals",
+      "boostAmount": "1/10",
+      "boostType": 1
+    },
+    {
+      "name": "Taming",
+      "ingredients": ["Beast Fur", "Beast Limb", "Beast Tooth", "Beast Wing"],
+      "allowedCells": ["cell-1"],
+      "boostStat": "damage to Beasts",
+      "boostAmount": "1/10",
+      "boostType": 1
+    },
+    {
+      "name": "Destruction",
+      "ingredients": ["Chunk of Graphite", "Construct Power", "Turtle Shell"],
+      "allowedCells": ["cell-1"],
+      "boostStat": "damage to Constructs",
+      "boostAmount": "1/10",
+      "boostType": 1
+    },
+    {
+      "name": "Slaying",
+      "ingredients": ["Dragon Eye", "Dragon Scale", "Dragon Tail"],
+      "allowedCells": ["cell-1"],
+      "boostStat": "damage to Dragons",
+      "boostAmount": "1/10",
+      "boostType": 1
+    },
+    {
+      "name": "Weathering",
+      "ingredients": ["Chunk of Coal", "Elemental Energy", "Magical Stone"],
+      "allowedCells": ["cell-1"],
+      "boostStat": "damage to Elementals",
+      "boostAmount": "1/10",
+      "boostType": 1
+    },
+    {
+      "name": "Murdering",
+      "ingredients": ["Humanoid Bone", "Humanoid Flesh", "Humanoid Limb"],
+      "allowedCells": ["cell-1"],
+      "boostStat": "damage to Humanoids",
+      "boostAmount": "1/10",
+      "boostType": 1
+    },
+    {
+      "name": "Solidifying",
+      "ingredients": ["Bird Nest", "Fish Fin", "Ooze Gel"],
+      "allowedCells": ["cell-1"],
+      "boostStat": "damage to Oozes",
+      "boostAmount": "1/10",
+      "boostType": 1
+    },
+    {
+      "name": "Weedwhacking",
+      "ingredients": ["Plant Branch", "Plant Leaf", "Plant Root", "Plant Vine"],
+      "allowedCells": ["cell-1"],
+      "boostStat": "damage to Plants",
+      "boostAmount": "1/10",
+      "boostType": 1
+    },
+    {
+      "name": "Charming",
+      "ingredients": ["Serpent Eye", "Serpent Tail", "Serpent Tongue"],
+      "allowedCells": ["cell-1"],
+      "boostStat": "damage to Serpents",
+      "boostAmount": "1/10",
+      "boostType": 1
+    },
+    {
+      "name": "Exterminating",
+      "ingredients": ["Vermin Eye", "Vermin Tooth", "Yellow Pollen"],
+      "allowedCells": ["cell-1"],
+      "boostStat": "damage to Vermin",
+      "boostAmount": "1/10",
+      "boostType": 1
+    },
+    {
+      "name": "Swiftness",
+      "ingredients": ["Beast Fur", "Rune Stone"],
+      "allowedCells": ["cell-1", "cell-2", "cell-4", "cell-5", "cell-6", "cell-8"],
+      "boostStat": "Multistrike Chance",
+      "boostAmount": "1/5",
+      "boostType": 1
+    },
+    {
+      "name": "Potency",
+      "ingredients": ["Plant Branch", "Squid Tentacle"],
+      "allowedCells": ["cell-1", "cell-2", "cell-4", "cell-5", "cell-6", "cell-8"],
+      "boostStat": "Critical Hit Chance",
+      "boostAmount": "8/25",
+      "boostType": 1
+    },
+    {
+      "name": "Recklessness",
+      "ingredients": ["Dragon Scale", "Honeycomb"],
+      "allowedCells": ["cell-1", "cell-2", "cell-4", "cell-5", "cell-6", "cell-8"],
+      "boostStat": "Critical Hit Damage",
+      "boostAmount": "2/5",
+      "boostType": 1
+    },
+    {
+      "name": "Resilience",
+      "ingredients": ["Copper Ore", "Humanoid Flesh"],
+      "allowedCells": ["cell-1", "cell-2", "cell-4", "cell-5", "cell-6", "cell-8"],
+      "boostStat": "Toughness",
+      "boostAmount": "2/25",
+      "boostType": 1
+    },
+    {
+      "name": "Retribution",
+      "ingredients": ["Rainbow Shard", "Serpent Eye"],
+      "allowedCells": ["cell-1", "cell-2", "cell-4", "cell-5", "cell-6", "cell-8"],
+      "boostStat": "Counter Attack Damage",
+      "boostAmount": "2/25",
+      "boostType": 1
+    },
+    {
+      "name": "Recovery",
+      "ingredients": ["Protection Stone", "Vermin Eye"],
+      "allowedCells": ["cell-1", "cell-2", "cell-4", "cell-5", "cell-6", "cell-8"],
+      "boostStat": "Healing Boost",
+      "boostAmount": "2/5",
+      "boostType": 1
+    },
+    {
+      "name": "Harvesting",
+      "ingredients": ["Copper Ore", "Honeycomb", "Rune Stone", "Squid Tentacle"],
+      "allowedCells": ["cell-1", "cell-2", "cell-4", "cell-5", "cell-6", "cell-8"],
+      "boostStat": "Resource Boost",
+      "boostAmount": "4/25",
+      "boostType": 1
+    },
+    {
+      "name": "Smithing",
+      "ingredients": ["Fish Fin", "Golden Apple", "Octopus Ink", "Yellow Pollen"],
+      "allowedCells": ["cell-1", "cell-2", "cell-4", "cell-5", "cell-6", "cell-8"],
+      "boostStat": "Crafting Boost",
+      "boostAmount": "4/25",
+      "boostType": 1
+    },
+    {
+      "name": "Etching",
+      "ingredients": ["Chunk of Coal", "Magical Stone", "Protection Stone", "Rainbow Shard"],
+      "allowedCells": ["cell-1", "cell-2", "cell-4", "cell-5", "cell-6", "cell-8"],
+      "boostStat": "Carving Boost",
+      "boostAmount": "4/25",
+      "boostType": 1
+    },
+    {
+      "name": "Wisdom",
+      "ingredients": ["Beast Fur", "Rune Stone"],
+      "allowedCells": ["cell-2"],
+      "boostStat": "Battle Experience Boost",
+      "boostAmount": "2/3",
+      "boostType": 1
+    },
+    {
+      "name": "Greed",
+      "ingredients": ["Chunk of Coal", "Dragon Eye"],
+      "allowedCells": ["cell-1"],
+      "boostStat": "Gold Boost",
+      "boostAmount": "2/3",
+      "boostType": 1
+    },
+    {
+      "name": "Luck",
+      "ingredients": ["Serpent Tail", "Turtle Shell"],
+      "allowedCells": ["cell-4"],
+      "boostStat": "Drop Boost",
+      "boostAmount": "2/3",
+      "boostType": 1
+    },
+    {
+      "name": "Mastery",
+      "ingredients": ["Golden Apple", "Ooze Gel"],
+      "allowedCells": ["cell-5"],
+      "boostStat": "Stat Drop Boost",
+      "boostAmount": "2/3",
+      "boostType": 1
+    },
+    {
+      "name": "Adventure",
+      "ingredients": ["Lucky Coin", "Rainbow Shard", "Squid Tentacle", "Yellow Pollen"],
+      "allowedCells": ["cell-2"],
+      "boostStat": "Quest Boost",
+      "boostAmount": "2/3",
+      "boostType": 1
+    },
+    {
+      "name": "Endurance",
+      "ingredients": ["Bird Nest", "Chunk of Graphite", "Lucky Coin", "Turtle Shell"],
+      "allowedCells": ["cell-5"],
+      "boostStat": "Maximum Stamina",
+      "boostAmount": "1",
+      "boostType": 2
+    },
+    {
+      "name": "Celerity",
+      "ingredients": ["Animal Tongue", "Octopus Ink"],
+      "allowedCells": ["cell-8"],
+      "boostStat": "First Hit Chance",
+      "boostAmount": "1/5",
+      "boostType": 1
+    },
+    {
+      "name": "Piercing",
+      "ingredients": ["Chunk of Graphite", "Humanoid Bone", "Octopus Ink", "Vermin Tooth"],
+      "allowedCells": ["cell-1"],
+      "boostStat": "Armor Penetration",
+      "boostAmount": "2/5",
+      "boostType": 1
+    },
+    {
+      "name": "Chronokinesis",
+      "ingredients": ["Chunk of Graphite", "Humanoid Bone", "Octopus Ink", "Vermin Tooth"],
+      "allowedCells": ["cell-8"],
+      "boostStat": "Action Time Reduction",
+      "boostAmount": "7/625",
+      "boostType": 3
+    }
+  ]
+}

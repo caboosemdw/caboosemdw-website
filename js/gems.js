@@ -1,104 +1,106 @@
-document.addEventListener('DOMContentLoaded', async () => {
+// js/gems.js
+// 🧙 Dynamic Gem Dropdown Management for Cab's Avabur Gem Calc
+
+// Load gem data from JSON
+async function loadGems() {
   const response = await fetch('data/gems.json');
   const data = await response.json();
-  const gems = data.gems;
+  return data.gems;
+}
 
-  // Build gem map for easy lookup
-  const gemMap = {};
+// Populate all gem dropdowns dynamically
+async function populateGemDropdowns() {
+  const gems = await loadGems();
+
+  // Cells that contain gem selections
+  const activeCells = ['cell-1', 'cell-2', 'cell-4', 'cell-5', 'cell-6', 'cell-8'];
+
+  activeCells.forEach(cellId => {
+    const cell = document.getElementById(cellId);
+    const pairs = cell.querySelectorAll('.gem-pair');
+
+    // Filter gems allowed in this specific cell
+    const allowedGems = gems.filter(gem => gem.allowedCells.includes(cellId));
+
+    pairs.forEach(pair => {
+      const primarySelect = pair.querySelector('.primary');
+      const secondarySelect = pair.querySelector('.secondary');
+
+      // Populate both dropdowns initially
+      populateDropdown(primarySelect, allowedGems);
+      populateDropdown(secondarySelect, allowedGems);
+
+      // Change listeners for synchronization and restrictions
+      primarySelect.addEventListener('change', () => {
+        syncPairedDropdowns(primarySelect, secondarySelect, allowedGems, cellId);
+      });
+      secondarySelect.addEventListener('change', () => {
+        syncPairedDropdowns(secondarySelect, primarySelect, allowedGems, cellId);
+      });
+    });
+  });
+}
+
+// Populate a dropdown with gem options
+function populateDropdown(select, gems) {
+  select.innerHTML = ''; // clear existing
+  const defaultOption = document.createElement('option');
+  defaultOption.textContent = select.classList.contains('primary') ? 'Primary Gem' : 'Secondary Gem';
+  select.appendChild(defaultOption);
+
   gems.forEach(gem => {
-    gemMap[gem.name] = gem;
+    const option = document.createElement('option');
+    option.value = gem.name;
+    option.textContent = gem.name;
+
+    // 🔹 Mark restricted gems (those with limited allowed cells)
+    if (gem.allowedCells.length < 6) {
+      option.dataset.restricted = "true";
+    }
+
+    select.appendChild(option);
   });
+}
 
-  // Initialize each slot pair
-  const allSlots = document.querySelectorAll('.pair');
-  allSlots.forEach(pair => {
-    const primarySelect = pair.querySelector('.primary-gem');
-    const secondarySelect = pair.querySelector('.secondary-gem');
+// Synchronize two paired dropdowns (Primary ↔ Secondary)
+function syncPairedDropdowns(changedSelect, pairedSelect, allowedGems, cellId) {
+  const changedValue = changedSelect.value;
 
-    // Find which cell this belongs to
-    const cellId = pair.closest('.grid-cell').id;
+  // Identify restricted gems (those allowed in fewer than all 6 active cells)
+  const restrictedGems = allowedGems
+    .filter(gem => gem.allowedCells.length < 6)
+    .map(g => g.name);
 
-    // Populate dropdowns
-    populateDropdown(primarySelect, gems, cellId);
-    populateDropdown(secondarySelect, gems, cellId);
+  // Re-populate paired dropdown to reset availability
+  const previousValue = pairedSelect.value;
+  populateDropdown(pairedSelect, allowedGems);
 
-    // Set up listeners
-    primarySelect.addEventListener('change', () => {
-      updatePairedDropdowns(primarySelect, secondarySelect, gems, cellId);
-    });
-    secondarySelect.addEventListener('change', () => {
-      updatePairedDropdowns(secondarySelect, primarySelect, gems, cellId);
-    });
-  });
+  // Restore previous selection if still valid
+  if (previousValue && previousValue !== changedValue) {
+    pairedSelect.value = previousValue;
+  }
 
-  /**
-   * Populates a dropdown with valid gems for a given cell
-   */
-  function populateDropdown(selectEl, gemList, cellId) {
-    selectEl.innerHTML = ''; // reset
-
-    // Default option
-    const defaultOpt = document.createElement('option');
-    defaultOpt.textContent =
-      selectEl.classList.contains('primary-gem') ? 'Primary Gem' : 'Secondary Gem';
-    defaultOpt.value = '';
-    selectEl.appendChild(defaultOpt);
-
-    // Add valid gems for this cell
-    gemList.forEach(gem => {
-      if (gem.allowedCells.includes(cellId)) {
-        const opt = document.createElement('option');
-        opt.value = gem.name;
-        opt.textContent = gem.name;
-        selectEl.appendChild(opt);
+  // If restricted gem selected, remove all other restricted gems from the paired dropdown
+  if (restrictedGems.includes(changedValue)) {
+    restrictedGems.forEach(rg => {
+      if (rg !== changedValue) {
+        const opt = pairedSelect.querySelector(`option[value="${rg}"]`);
+        if (opt) opt.remove();
       }
     });
   }
 
-  /**
-   * Update both dropdowns when one changes
-   */
-  function updatePairedDropdowns(changedSelect, pairedSelect, gemList, cellId) {
-    const selectedValue = changedSelect.value;
-
-    // Rebuild the paired dropdown from scratch
-    const prevSelection = pairedSelect.value;
-    populateDropdown(pairedSelect, gemList, cellId);
-
-    // Reapply filters:
-    // 1. Remove restricted duplicates if applicable
-    const restrictedGems = gemList.filter(
-      g => g.allowedCells.length === 1 && g.allowedCells.includes(cellId)
-    );
-
-    restrictedGems.forEach(rGem => {
-      // If the selected gem is restricted, remove all restricted ones from paired
-      if (selectedValue === rGem.name) {
-        disableRestrictedGems(pairedSelect, restrictedGems);
-      }
-    });
-
-    // 2. Prevent same gem in both selects
-    if (selectedValue) {
-      const opt = pairedSelect.querySelector(`option[value="${selectedValue}"]`);
-      if (opt) opt.disabled = true;
-    }
-
-    // 3. Re-select the previous gem in paired dropdown if still valid
-    if (pairedSelect.querySelector(`option[value="${prevSelection}"]:not([disabled])`)) {
-      pairedSelect.value = prevSelection;
-    } else {
-      pairedSelect.value = '';
-    }
+  // Remove the selected gem itself from the paired dropdown
+  if (changedValue && changedValue !== 'Primary Gem' && changedValue !== 'Secondary Gem') {
+    const opt = pairedSelect.querySelector(`option[value="${changedValue}"]`);
+    if (opt) opt.remove();
   }
 
-  /**
-   * Disable restricted gems in the dropdown
-   */
-  function disableRestrictedGems(selectEl, restrictedList) {
-    restrictedList.forEach(rGem => {
-      const opt = selectEl.querySelector(`option[value="${rGem.name}"]`);
-      if (opt) opt.disabled = true;
-    });
+  // Trigger summary update (if function exists globally)
+  if (typeof updateSummaryTables === 'function') {
+    updateSummaryTables();
   }
-});
+}
+
+// Initialize population after DOM is ready
+window.addEventListener('DOMContentLoaded', populateGemDropdowns);

@@ -15,180 +15,214 @@
       <p>This page will soon host Cab's Avabur Gem Calculator.</p>
     </section>
 
+    <!-- Gem Tier & Gear Level Row -->
+    <section id="tier-row" style="margin-bottom: 1rem;">
+      <label for="gem-tier">Gem Tier:</label>
+      <input type="number" id="gem-tier" value="0" min="0" style="width: 6rem;">
+      <span id="gear-level-display">Gear Level: 0</span>
+    </section>
+
     <section id="gem-grid">
       <div class="grid-container">
-        <!-- Row 1 -->
+
+        <!-- CELL 1 -->
         <div id="cell-1" class="grid-cell">
           <h2>Weapon</h2>
           <div class="gem-selects">
-            <div class="pair">
-              <select id="cell-1-slot-1-primary" class="primary-gem"></select>
-              <select id="cell-1-slot-1-secondary" class="secondary-gem"></select>
-            </div>
-            <div class="pair">
-              <select id="cell-1-slot-2-primary" class="primary-gem"></select>
-              <select id="cell-1-slot-2-secondary" class="secondary-gem"></select>
-            </div>
-            <div class="pair">
-              <select id="cell-1-slot-3-primary" class="primary-gem"></select>
-              <select id="cell-1-slot-3-secondary" class="secondary-gem"></select>
-            </div>
-            <div class="pair">
-              <select id="cell-1-slot-4-primary" class="primary-gem"></select>
-              <select id="cell-1-slot-4-secondary" class="secondary-gem"></select>
-            </div>
-            <div class="pair">
-              <select id="cell-1-slot-5-primary" class="primary-gem"></select>
-              <select id="cell-1-slot-5-secondary" class="secondary-gem"></select>
-            </div>
+            <div class="gem-pair"><select class="primary"><option>Primary Gem</option></select><select class="secondary"><option>Secondary Gem</option></select></div>
+            <div class="gem-pair"><select class="primary"><option>Primary Gem</option></select><select class="secondary"><option>Secondary Gem</option></select></div>
+            <div class="gem-pair"><select class="primary"><option>Primary Gem</option></select><select class="secondary"><option>Secondary Gem</option></select></div>
+            <div class="gem-pair"><select class="primary"><option>Primary Gem</option></select><select class="secondary"><option>Secondary Gem</option></select></div>
+            <div class="gem-pair"><select class="primary"><option>Primary Gem</option></select><select class="secondary"><option>Secondary Gem</option></select></div>
           </div>
         </div>
 
+        <!-- CELL 2 -->
         <div id="cell-2" class="grid-cell">
           <h2>Helmet</h2>
           <div class="gem-selects">
-            <div class="pair">
-              <select id="cell-2-slot-1-primary" class="primary-gem"></select>
-              <select id="cell-2-slot-1-secondary" class="secondary-gem"></select>
-            </div>
-            <div class="pair">
-              <select id="cell-2-slot-2-primary" class="primary-gem"></select>
-              <select id="cell-2-slot-2-secondary" class="secondary-gem"></select>
-            </div>
-            <div class="pair">
-              <select id="cell-2-slot-3-primary" class="primary-gem"></select>
-              <select id="cell-2-slot-3-secondary" class="secondary-gem"></select>
-            </div>
-            <div class="pair">
-              <select id="cell-2-slot-4-primary" class="primary-gem"></select>
-              <select id="cell-2-slot-4-secondary" class="secondary-gem"></select>
-            </div>
-            <div class="pair">
-              <select id="cell-2-slot-5-primary" class="primary-gem"></select>
-              <select id="cell-2-slot-5-secondary" class="secondary-gem"></select>
-            </div>
+            <div class="gem-pair"><select class="primary"><option>Primary Gem</option></select><select class="secondary"><option>Secondary Gem</option></select></div>
+            <div class="gem-pair"><select class="primary"><option>Primary Gem</option></select><select class="secondary"><option>Secondary Gem</option></select></div>
+            <div class="gem-pair"><select class="primary"><option>Primary Gem</option></select><select class="secondary"><option>Secondary Gem</option></select></div>
+            <div class="gem-pair"><select class="primary"><option>Primary Gem</option></select><select class="secondary"><option>Secondary Gem</option></select></div>
+            <div class="gem-pair"><select class="primary"><option>Primary Gem</option></select><select class="secondary"><option>Secondary Gem</option></select></div>
           </div>
         </div>
 
         <div id="cell-3" class="grid-cell blank-cell"></div>
 
-        <!-- Row 2 -->
+        <!-- CELL 4 -->
         <div id="cell-4" class="grid-cell">
           <h2>Gloves</h2>
           <div class="gem-selects">
-            <div class="pair">
-              <select id="cell-4-slot-1-primary" class="primary-gem"></select>
-              <select id="cell-4-slot-1-secondary" class="secondary-gem"></select>
-            </div>
-            <div class="pair">
-              <select id="cell-4-slot-2-primary" class="primary-gem"></select>
-              <select id="cell-4-slot-2-secondary" class="secondary-gem"></select>
-            </div>
-            <div class="pair">
-              <select id="cell-4-slot-3-primary" class="primary-gem"></select>
-              <select id="cell-4-slot-3-secondary" class="secondary-gem"></select>
-            </div>
-            <div class="pair">
-              <select id="cell-4-slot-4-primary" class="primary-gem"></select>
-              <select id="cell-4-slot-4-secondary" class="secondary-gem"></select>
-            </div>
-            <div class="pair">
-              <select id="cell-4-slot-5-primary" class="primary-gem"></select>
-              <select id="cell-4-slot-5-secondary" class="secondary-gem"></select>
-            </div>
+            <div class="gem-pair"><select class="primary"><option>Primary Gem</option></select><select class="secondary"><option>Secondary Gem</option></select></div>
+            <div class="gem-pair"><select class="primary"><option>Primary Gem</option></select><select class="secondary"><option>Secondary Gem</option></select></div>
+            <div class="gem-pair"><select class="primary"><option>Primary Gem</option></select><select class="secondary"><option>Secondary Gem</option></select></div>
+            <div class="gem-pair"><select class="primary"><option>Primary Gem</option></select><select class="secondary"><option>Secondary Gem</option></select></div>
+            <div class="gem-pair"><select class="primary"><option>Primary Gem</option></select><select class="secondary"><option>Secondary Gem</option></select></div>
           </div>
         </div>
 
+        <!-- CELL 5 -->
         <div id="cell-5" class="grid-cell">
           <h2>Breastplate</h2>
           <div class="gem-selects">
-            <div class="pair">
-              <select id="cell-5-slot-1-primary" class="primary-gem"></select>
-              <select id="cell-5-slot-1-secondary" class="secondary-gem"></select>
-            </div>
-            <div class="pair">
-              <select id="cell-5-slot-2-primary" class="primary-gem"></select>
-              <select id="cell-5-slot-2-secondary" class="secondary-gem"></select>
-            </div>
-            <div class="pair">
-              <select id="cell-5-slot-3-primary" class="primary-gem"></select>
-              <select id="cell-5-slot-3-secondary" class="secondary-gem"></select>
-            </div>
-            <div class="pair">
-              <select id="cell-5-slot-4-primary" class="primary-gem"></select>
-              <select id="cell-5-slot-4-secondary" class="secondary-gem"></select>
-            </div>
-            <div class="pair">
-              <select id="cell-5-slot-5-primary" class="primary-gem"></select>
-              <select id="cell-5-slot-5-secondary" class="secondary-gem"></select>
-            </div>
+            <div class="gem-pair"><select class="primary"><option>Primary Gem</option></select><select class="secondary"><option>Secondary Gem</option></select></div>
+            <div class="gem-pair"><select class="primary"><option>Primary Gem</option></select><select class="secondary"><option>Secondary Gem</option></select></div>
+            <div class="gem-pair"><select class="primary"><option>Primary Gem</option></select><select class="secondary"><option>Secondary Gem</option></select></div>
+            <div class="gem-pair"><select class="primary"><option>Primary Gem</option></select><select class="secondary"><option>Secondary Gem</option></select></div>
+            <div class="gem-pair"><select class="primary"><option>Primary Gem</option></select><select class="secondary"><option>Secondary Gem</option></select></div>
           </div>
         </div>
 
+        <!-- CELL 6 -->
         <div id="cell-6" class="grid-cell">
           <h2>Offhand</h2>
           <div class="gem-selects">
-            <div class="pair">
-              <select id="cell-6-slot-1-primary" class="primary-gem"></select>
-              <select id="cell-6-slot-1-secondary" class="secondary-gem"></select>
-            </div>
-            <div class="pair">
-              <select id="cell-6-slot-2-primary" class="primary-gem"></select>
-              <select id="cell-6-slot-2-secondary" class="secondary-gem"></select>
-            </div>
-            <div class="pair">
-              <select id="cell-6-slot-3-primary" class="primary-gem"></select>
-              <select id="cell-6-slot-3-secondary" class="secondary-gem"></select>
-            </div>
-            <div class="pair">
-              <select id="cell-6-slot-4-primary" class="primary-gem"></select>
-              <select id="cell-6-slot-4-secondary" class="secondary-gem"></select>
-            </div>
-            <div class="pair">
-              <select id="cell-6-slot-5-primary" class="primary-gem"></select>
-              <select id="cell-6-slot-5-secondary" class="secondary-gem"></select>
-            </div>
+            <div class="gem-pair"><select class="primary"><option>Primary Gem</option></select><select class="secondary"><option>Secondary Gem</option></select></div>
+            <div class="gem-pair"><select class="primary"><option>Primary Gem</option></select><select class="secondary"><option>Secondary Gem</option></select></div>
+            <div class="gem-pair"><select class="primary"><option>Primary Gem</option></select><select class="secondary"><option>Secondary Gem</option></select></div>
+            <div class="gem-pair"><select class="primary"><option>Primary Gem</option></select><select class="secondary"><option>Secondary Gem</option></select></div>
+            <div class="gem-pair"><select class="primary"><option>Primary Gem</option></select><select class="secondary"><option>Secondary Gem</option></select></div>
           </div>
         </div>
 
-        <!-- Row 3 -->
         <div id="cell-7" class="grid-cell blank-cell"></div>
 
+        <!-- CELL 8 -->
         <div id="cell-8" class="grid-cell">
           <h2>Boots</h2>
           <div class="gem-selects">
-            <div class="pair">
-              <select id="cell-8-slot-1-primary" class="primary-gem"></select>
-              <select id="cell-8-slot-1-secondary" class="secondary-gem"></select>
-            </div>
-            <div class="pair">
-              <select id="cell-8-slot-2-primary" class="primary-gem"></select>
-              <select id="cell-8-slot-2-secondary" class="secondary-gem"></select>
-            </div>
-            <div class="pair">
-              <select id="cell-8-slot-3-primary" class="primary-gem"></select>
-              <select id="cell-8-slot-3-secondary" class="secondary-gem"></select>
-            </div>
-            <div class="pair">
-              <select id="cell-8-slot-4-primary" class="primary-gem"></select>
-              <select id="cell-8-slot-4-secondary" class="secondary-gem"></select>
-            </div>
-            <div class="pair">
-              <select id="cell-8-slot-5-primary" class="primary-gem"></select>
-              <select id="cell-8-slot-5-secondary" class="secondary-gem"></select>
-            </div>
+            <div class="gem-pair"><select class="primary"><option>Primary Gem</option></select><select class="secondary"><option>Secondary Gem</option></select></div>
+            <div class="gem-pair"><select class="primary"><option>Primary Gem</option></select><select class="secondary"><option>Secondary Gem</option></select></div>
+            <div class="gem-pair"><select class="primary"><option>Primary Gem</option></select><select class="secondary"><option>Secondary Gem</option></select></div>
+            <div class="gem-pair"><select class="primary"><option>Primary Gem</option></select><select class="secondary"><option>Secondary Gem</option></select></div>
+            <div class="gem-pair"><select class="primary"><option>Primary Gem</option></select><select class="secondary"><option>Secondary Gem</option></select></div>
           </div>
         </div>
 
         <div id="cell-9" class="grid-cell blank-cell"></div>
+
+        <!-- New Bottom Row -->
+        <div id="cell-10" class="grid-cell data-cell">
+          <h2>Carver Stuff</h2>
+          <button id="import-btn">Import</button>
+          <button id="export-btn">Export</button>
+          <div style="margin-top: 1rem;">
+            <label for="carver-name">Carver:</label>
+            <input type="text" id="carver-name" value="Jeight" style="width: 8rem;">
+          </div>
+        </div>
+
+        <div id="cell-11" class="grid-cell data-cell">
+          <h2>Selected Gems</h2>
+          <table id="selected-gems-table">
+            <thead>
+              <tr><th>Gem</th><th>Count</th><th>Value</th><th>Boost</th></tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+
+        <div id="cell-12" class="grid-cell data-cell">
+          <h2>Ingredients</h2>
+          <table id="ingredients-table">
+            <thead>
+              <tr><th>Ingredient</th><th>Count</th><th>Market Count</th><th>Market Price</th></tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
       </div>
     </section>
   </main>
 
   <div id="footer-placeholder"></div>
 
-  <script src="js/header-footer.js"></script>
-  <script src="js/gems.js"></script>
-  <script src="js/script.js"></script>
+<script src="js/header-footer.js"></script>
+<script src="js/gems.js"></script>
+<script>
+  const gemTierInput = document.getElementById('gem-tier');
+  const gearLevelDisplay = document.getElementById('gear-level-display');
+
+  async function updateSummaryTables() {
+    const response = await fetch('data/gems.json');
+    const data = await response.json();
+    const gems = data.gems;
+
+    const selectedGems = {};
+    const selectedIngredients = {};
+
+    // 🔹 Current gem tier and ingredient multiplier
+    const tier = parseInt(gemTierInput.value) || 0;
+    const ingredientMultiplier = Math.floor(tier / 5) + 1;
+
+    // 🔹 Gather all selected gems across all dropdowns
+    document.querySelectorAll('select').forEach(select => {
+      const gemName = select.value;
+      if (gemName && gemName !== 'Primary Gem' && gemName !== 'Secondary Gem') {
+        selectedGems[gemName] = (selectedGems[gemName] || 0) + 1;
+      }
+    });
+
+    // 🔹 Reset both tables
+    const gemTableBody = document.querySelector('#selected-gems-table tbody');
+    const ingTableBody = document.querySelector('#ingredients-table tbody');
+    gemTableBody.innerHTML = '';
+    ingTableBody.innerHTML = '';
+
+    // 🔹 Sort selected gems alphabetically by name
+    const sortedGems = Object.entries(selectedGems).sort(([a], [b]) => a.localeCompare(b));
+
+    // 🔹 Populate "Selected Gems" table (Cell-11)
+    sortedGems.forEach(([gem, count]) => {
+      const row = document.createElement('tr');
+      row.innerHTML = `<td>${gem}</td><td>${count}</td><td>-</td><td>-</td>`;
+      gemTableBody.appendChild(row);
+
+      // 🔹 Aggregate ingredients for each gem
+      const gemData = gems.find(g => g.name === gem);
+      if (gemData) {
+        gemData.ingredients.forEach(ingredient => {
+          selectedIngredients[ingredient] =
+            (selectedIngredients[ingredient] || 0) + (ingredientMultiplier * count);
+        });
+      }
+    });
+
+    // 🔹 Sort ingredients alphabetically by name
+    const sortedIngredients = Object.entries(selectedIngredients).sort(([a], [b]) => a.localeCompare(b));
+
+    // 🔹 Populate "Ingredients" table (Cell-12)
+    sortedIngredients.forEach(([ingredient, count]) => {
+      const row = document.createElement('tr');
+      row.innerHTML = `<td>${ingredient}</td><td>${count}</td><td>-</td><td>-</td>`;
+      ingTableBody.appendChild(row);
+    });
+  }
+
+  // 🔹 Update gear level when Gem Tier changes
+  function updateGearLevel() {
+    const tier = parseInt(gemTierInput.value) || 0;
+    const gearLevel = tier * 10;
+    gearLevelDisplay.textContent = `Gear Level: ${gearLevel}`;
+    updateSummaryTables();
+  }
+
+  // 🔹 Event listeners for tier and dropdowns
+  gemTierInput.addEventListener('input', updateGearLevel);
+  document.addEventListener('change', e => {
+    if (e.target.matches('select')) {
+      updateSummaryTables();
+    }
+  });
+
+  // 🔹 Initialize everything on page load
+  window.addEventListener('DOMContentLoaded', () => {
+    updateGearLevel();
+  });
+</script>
+<script src="js/script.js"></script>
+
 </body>
 </html>
